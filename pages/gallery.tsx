@@ -5,9 +5,9 @@ import styles from "../styles/Home.module.css";
 import { Grid } from "@mui/material";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Footer from "../components/Nav";
+import Footer from "../components/Footer";
 
-const Home: NextPage = () => {
+const Gallery: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -38,4 +38,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Gallery;
