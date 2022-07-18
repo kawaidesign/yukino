@@ -1,16 +1,14 @@
 import type { NextPage } from "next";
-import Image from "next/image";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
+import Work from "../components/Work";
 
 const Gallery: NextPage = () => {
   return (
     <Layout>
-      <Image
-        src="/images/slide/slide1.jpg"
-        width={1170}
-        height={814}
-        objectFit="contain"
-        alt="slide1"
+      <Work
+        src="/images/gallery/29_rocca_skirt.jpg"
+        title="「ブーケ」/ textile / 2021"
+        caption="説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。"
       />
     </Layout>
   );

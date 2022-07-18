@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 const Header = () => {
   return (
     <>
-      <Grid item mb={-1}>
+      <Grid item mb={-1} mt={3}>
         <Image
           src="/images/header/yukino_logo.png"
           width={220}

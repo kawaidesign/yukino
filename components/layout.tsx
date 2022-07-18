@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import Head from "next/head";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import Footer from "../components/Nav";
+import Header from "./Header";
+import Nav from "./Nav";
+import Footer from "./Footer";
 import styles from "../styles/Home.module.css";
 
 type Props = {
@@ -19,10 +19,13 @@ export default function Layout({ children }: Props) {
       </Head>
 
       <main>
-        <Grid container alignItems="center">
+        <Grid container alignItems="top">
           <Grid container md={3} xs={12} pr={2} direction="column">
+            {/* ロゴとサブコピー */}
             <Header />
-            {/* <Nav /> */}
+            {/* ナビゲーション */}
+            <Nav />
+            {/* コピーライト */}
             <Footer />
           </Grid>
           <Grid item md={9} xs={12}>
