@@ -1,15 +1,22 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
 import Work from "../components/Work";
+import { WORKLIST } from "../constants/workList";
 
 const Gallery: NextPage = () => {
   return (
     <Layout>
-      <Work
-        src="/images/gallery/29_rocca_skirt.jpg"
-        title="「ブーケ」/ textile / 2021"
-        caption="説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。"
-      />
+      {/* WORKLISTを読み込んでループして表示する */}
+      {WORKLIST.map((work, index) => {
+        return (
+          <Work
+            key={index}
+            src={work.src}
+            title={work.title}
+            caption={work.caption}
+          />
+        );
+      })}
     </Layout>
   );
 };
