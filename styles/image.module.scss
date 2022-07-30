@@ -1,0 +1,23 @@
+// .fadeIn {
+//   opacity: 0;
+//   transition: opacity 1s ease;
+//   &[data-load="done"] {
+//     opacity: 1;
+//   }
+// }
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

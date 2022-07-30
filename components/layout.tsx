@@ -20,7 +20,7 @@ export default function Layout({ children }: Props) {
 
       <main>
         <Grid container alignItems="top">
-          <Grid container md={3} xs={12} pr={2} direction="column">
+          <Grid container item md={3} xs={12} pr={2} direction="column">
             {/* ロゴとサブコピー */}
             <Header />
             {/* ナビゲーション */}
