@@ -37,19 +37,33 @@
   margin: 0 auto;
 }
 
-/* .fadeIn {
+/* メイン画像の切替えに合わせて表示・非表示を繰り返すアニメーション */
+.fadeIn {
+  animation: ease-in-out 5s linear infinite;
   animation-name: fadeInAnime;
-  animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
+/* 画像の「パっ」と切り替わっているのが見えないように最初と最後にopacity: 0の時間を設けている */
 @keyframes fadeInAnime {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  5% {
+    opacity: 0;
+  }
+
+  50% {
     opacity: 1;
   }
-} */
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

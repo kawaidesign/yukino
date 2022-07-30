@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Layout from "../components/Layout";
 import React, { useState, useEffect } from "react";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const images: string[] = [
@@ -15,7 +16,6 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      console.log(imageNumber);
       // imagesの最後の画像を表示していたら最初に戻す
       // 最後の画像でなければ次の画像を表示する
       setImageNumbaer(
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           ? imageNumber - (images.length - 1)
           : imageNumber + 1
       );
-    }, 1000);
+    }, 5000);
     return function () {
       clearInterval(intervalId);
     };
@@ -32,6 +32,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Image
+        className={styles.fadeIn}
         src={images[imageNumber]}
         objectFit="contain"
         width={1170}
