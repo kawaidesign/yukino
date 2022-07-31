@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Layout from "../components/Layout";
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -30,16 +29,14 @@ const Home: NextPage = () => {
   }, [imageNumber, images.length]);
 
   return (
-    <Layout>
-      <Image
-        className={styles.fadeIn}
-        src={images[imageNumber]}
-        objectFit="contain"
-        width={1170}
-        height={814}
-        alt="slide"
-      />
-    </Layout>
+    <Image
+      className={styles.fadeIn}
+      src={images[imageNumber]}
+      objectFit="contain"
+      width={1170}
+      height={814}
+      alt="slide"
+    />
   );
 };
 
