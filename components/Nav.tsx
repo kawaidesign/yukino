@@ -48,7 +48,7 @@ const Nav = () => {
       </Grid>
       <Grid item mb={1} ml={-2}>
         <a
-          href="https://www.yukinoshop.com/"
+          href="https://www.yukinoshop.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -76,20 +76,53 @@ const Nav = () => {
           />
         </a>
       </Grid>
-      <Grid item mb={1}>
-        <a
-          href="https://linktr.ee/cinnamonsasaki"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/images/nav/usagi.png"
-            width={32}
-            height={32}
-            objectFit="contain"
-            alt="usagi"
-          />
-        </a>
+      {/* 以下、SNS */}
+      <Grid container alignItems="center" mb={1}>
+        <Grid item mr={1}>
+          <a
+            href="https://linktr.ee/cinnamonsasaki"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/images/nav/usagi.png"
+              width={26}
+              height={26}
+              objectFit="contain"
+              alt="usagi"
+            />
+          </a>
+        </Grid>
+        <Grid item ml={0.5} mr={1.5}>
+          <a
+            href="https://www.instagram.com/yukino_design_works/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/images/nav/instagram.png"
+              width={20}
+              height={20}
+              objectFit="contain"
+              alt="instagram"
+            />
+          </a>
+        </Grid>
+        <Grid item>
+          <a
+            href="https://twitter.com/yukino_dw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/images/nav/twitter.png"
+              width={28}
+              height={28}
+              objectFit="contain"
+              alt="twitter"
+            />
+          </a>
+        </Grid>
       </Grid>
     </>
   );
