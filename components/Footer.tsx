@@ -1,5 +1,8 @@
 import { Grid } from "@mui/material";
 
+/**
+ * フッターのコンポーネント。
+ */
 const Footer = () => {
   return (
     <Grid item mb={2} fontSize={10} letterSpacing={2}>

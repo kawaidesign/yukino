@@ -1,22 +1,28 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+// 画像の情報の型定義
 type props = {
-  src: string;
-  title: string;
-  caption: string;
+  src: string; // パス
+  title: string; // タイトル
+  caption: string; // キャプション
 };
 
+/**
+ * galleryに表示するイラスト
+ * @param work 画像の情報
+ */
 const Work = (props: props) => {
   return (
     <div className={styles.gallery}>
       <Image
         src={props.src}
-        width={1170}
-        height={814}
+        width={1200}
+        height={840}
         objectFit="contain"
         alt="works"
       />
+      {/* ホバー時に表示する説明文 */}
       <div className={styles.mask}>
         <div>
           <div className={styles.title}>{props.title}</div>

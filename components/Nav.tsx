@@ -1,8 +1,19 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Grid } from "@mui/material";
+import React, { useState } from "react";
+import GalleryModal from "./GalleryModal";
 
+/**
+ * ナビゲーションのコンポーネント。
+ * @param children 子要素
+ */
 const Nav = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
       <Grid item mb={1} ml={-1.4}>
@@ -21,16 +32,16 @@ const Nav = () => {
         </a>
       </Grid>
       <Grid item mb={1} ml={-1}>
-        <Link href="/gallery">
-          <Image
-            src="/images/nav/gallery.jpg"
-            width={90}
-            height={32}
-            objectFit="contain"
-            alt="gallery"
-          />
-        </Link>
+        <Image
+          onClick={handleClick}
+          src="/images/nav/gallery.jpg"
+          width={90}
+          height={32}
+          objectFit="contain"
+          alt="gallery"
+        />
       </Grid>
+      {isModalOpen && <GalleryModal onClick={handleClick} />}
       <Grid item mb={1} ml={-2}>
         <a
           href="https://www.yukinoshop.com/blog"

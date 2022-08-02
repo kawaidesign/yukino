@@ -9,6 +9,9 @@ type Props = {
   children?: React.ReactNode;
 };
 
+/**
+ * レイアウトのコンポーネント。
+ */
 export default function Layout({ children }: Props) {
   return (
     <div className={styles.container}>

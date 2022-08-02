@@ -1,3 +1,4 @@
+/* layout.tsx用 */
 .container {
   min-height: 100vh;
   padding: 2rem 2rem;
@@ -5,6 +6,8 @@
   align-items: center;
   justify-content: center;
 }
+
+/* galleryページ用 */
 .gallery {
   overflow: hidden;
   position: relative; /* 相対位置指定 */
@@ -37,6 +40,45 @@
   margin: 0 auto;
 }
 
+/* ナビゲーションのgalleryボタン押下時のモーダル用 */
+.galleryModalBackground {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galleryModalContainer {
+  z-index: 2;
+  padding: 2rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  filter: drop-shadow(0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1));
+}
+.galleryModalButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 21rem;
+}
+.galleyModaltitle {
+  margin-bottom: 2rem;
+}
+.galleyModalButton {
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
 /* メイン画像の切替えに合わせて表示・非表示を繰り返すアニメーション */
 .fadeIn {
   animation: ease-in-out 5s linear infinite;
@@ -44,25 +86,20 @@
   animation-fill-mode: forwards;
   opacity: 0;
 }
-
 /* 画像の「パっ」と切り替わっているのが見えないように最初と最後にopacity: 0の時間を設けている */
 @keyframes fadeInAnime {
   0% {
     opacity: 0;
   }
-
   5% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
   }
-
   95% {
     opacity: 0;
   }
-
   100% {
     opacity: 0;
   }

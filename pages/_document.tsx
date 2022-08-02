@@ -1,6 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
-// class Document extends NextDocument {
+/**
+ * ヘッダー情報。
+ */
 class MyDocument extends Document {
   render() {
     return (

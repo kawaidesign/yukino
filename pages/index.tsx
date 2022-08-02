@@ -8,11 +8,13 @@ const Home: NextPage = () => {
     "/images/slide/slide1.jpg",
     "/images/slide/slide2.jpg",
     "/images/slide/slide3.jpg",
-    "/images/slide/slide4.jpg",
   ];
 
   const [imageNumber, setImageNumbaer] = useState(0);
 
+  /**
+   * 一定時間ごとにメイン画像を切り替える。
+   */
   useEffect(() => {
     const intervalId = setInterval(() => {
       // imagesの最後の画像を表示していたら最初に戻す
@@ -33,8 +35,8 @@ const Home: NextPage = () => {
       className={styles.fadeIn}
       src={images[imageNumber]}
       objectFit="contain"
-      width={1170}
-      height={814}
+      width={1200}
+      height={840}
       alt="slide"
     />
   );
