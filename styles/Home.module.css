@@ -11,6 +11,7 @@
 .gallery {
   overflow: hidden;
   position: relative; /* 相対位置指定 */
+  margin-bottom: 4rem;
 }
 .gallery .mask {
   width: 100%;
