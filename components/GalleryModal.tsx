@@ -20,7 +20,7 @@ const GalleryModal = (props: { onClick: MouseEventHandler }) => {
               イラスト
             </button>
           </Link>
-          <Link href="/">
+          <Link href="/zakka">
             <button
               className={styles.galleyModalButton}
               onClick={props.onClick}

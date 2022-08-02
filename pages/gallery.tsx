@@ -11,6 +11,7 @@ const Gallery: NextPage = () => {
           <Work
             key={index}
             src={work.src}
+            isCaption={true}
             title={work.title}
             caption={work.caption}
           />

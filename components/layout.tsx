@@ -17,8 +17,11 @@ export default function Layout({ children }: Props) {
     <div className={styles.container}>
       <Head>
         <title>yukino</title>
-        <meta name="description" content="yukino web site" />
-        <link rel="icon" href="/images/nav/usagi.png" />
+        <meta
+          name="description"
+          content="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
+        />
+        <link rel="icon" href="/images/favicon/favicon.png" />
       </Head>
 
       <main>

@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 const Header = () => {
   return (
     <>
-      <Grid item mb={-1} mt={3}>
+      <Grid item mb={-3} mt={3}>
         <Link href="/">
           <Image
             src="/images/header/yukino_logo.png"
@@ -19,11 +19,11 @@ const Header = () => {
           />
         </Link>
       </Grid>
-      <Grid item mb={2}>
+      <Grid item mb={2} ml={0.5}>
         <Image
-          src="/images/header/copy.png"
-          width={260}
-          height={24}
+          src="/images/header/hug_humor.png"
+          width={200}
+          height={41}
           objectFit="contain"
           alt="copy"
         />

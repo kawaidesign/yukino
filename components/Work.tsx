@@ -4,8 +4,9 @@ import styles from "../styles/Home.module.css";
 // 画像の情報の型定義
 type props = {
   src: string; // パス
-  title: string; // タイトル
-  caption: string; // キャプション
+  isCaption: boolean; // ホバー時にキャプションを表示する = true / 表示しない = false
+  title?: string; // タイトル
+  caption?: string; // キャプション
 };
 
 /**
@@ -23,12 +24,14 @@ const Work = (props: props) => {
         alt="works"
       />
       {/* ホバー時に表示する説明文 */}
-      <div className={styles.mask}>
-        <div>
-          <div className={styles.title}>{props.title}</div>
-          <div className={styles.caption}>{props.caption}</div>
+      {props.isCaption && (
+        <div className={styles.mask}>
+          <div>
+            <div className={styles.title}>{props.title}</div>
+            <div className={styles.caption}>{props.caption}</div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
