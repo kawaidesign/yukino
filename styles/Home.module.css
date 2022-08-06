@@ -1,3 +1,13 @@
+/* navigation用 */
+.navButton {
+  transition: 0.5s;
+}
+
+.navButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 /* layout.tsx用 */
 .container {
   min-height: 100vh;
@@ -82,7 +92,7 @@
 
 /* メイン画像の切替えに合わせて表示・非表示を繰り返すアニメーション */
 .fadeIn {
-  animation: ease-in-out 5s linear infinite;
+  animation: ease-in-out 8s linear infinite;
   animation-name: fadeInAnime;
   animation-fill-mode: forwards;
   opacity: 0;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import GalleryModal from "./GalleryModal";
+import styles from "../styles/Home.module.css";
 
 /**
  * ナビゲーションのコンポーネント。
@@ -23,6 +24,7 @@ const Nav = () => {
           rel="noopener noreferrer"
         >
           <Image
+            className={styles.navButton}
             src="/images/nav/about.jpg"
             width={90}
             height={32}
@@ -33,6 +35,7 @@ const Nav = () => {
       </Grid>
       <Grid item mb={1} ml={-1}>
         <Image
+          className={styles.navButton}
           onClick={handleClick}
           src="/images/nav/gallery.jpg"
           width={90}
@@ -49,6 +52,7 @@ const Nav = () => {
           rel="noopener noreferrer"
         >
           <Image
+            className={styles.navButton}
             src="/images/nav/blog.jpg"
             width={90}
             height={32}
@@ -64,6 +68,7 @@ const Nav = () => {
           rel="noopener noreferrer"
         >
           <Image
+            className={styles.navButton}
             src="/images/nav/shop.jpg"
             width={90}
             height={32}
@@ -79,6 +84,7 @@ const Nav = () => {
           rel="noopener noreferrer"
         >
           <Image
+            className={styles.navButton}
             src="/images/nav/contact.jpg"
             width={90}
             height={32}
@@ -89,7 +95,7 @@ const Nav = () => {
       </Grid>
       {/* 以下、SNS */}
       <Grid container alignItems="center" mb={1}>
-        <Grid item mr={1}>
+        <Grid item mr={1} className={styles.navButton}>
           <a
             href="https://linktr.ee/cinnamonsasaki"
             target="_blank"
@@ -104,7 +110,7 @@ const Nav = () => {
             />
           </a>
         </Grid>
-        <Grid item ml={0.5} mr={1.5}>
+        <Grid item ml={0.5} mr={1.5} className={styles.navButton}>
           <a
             href="https://www.instagram.com/yukino_design_works/"
             target="_blank"
@@ -119,7 +125,7 @@ const Nav = () => {
             />
           </a>
         </Grid>
-        <Grid item>
+        <Grid item className={styles.navButton}>
           <a
             href="https://twitter.com/yukino_dw"
             target="_blank"

@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const images: string[] = [
+    "/images/slide/hug_humor.jpg",
     "/images/slide/slide1.jpg",
     "/images/slide/slide2.jpg",
     "/images/slide/slide3.jpg",
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
           ? imageNumber - (images.length - 1)
           : imageNumber + 1
       );
-    }, 5000);
+    }, 8000);
     return function () {
       clearInterval(intervalId);
     };

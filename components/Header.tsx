@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Grid } from "@mui/material";
+import styles from "../styles/Home.module.css";
 
 /**
  * ヘッダーのコンポーネント。
@@ -8,25 +9,16 @@ import { Grid } from "@mui/material";
 const Header = () => {
   return (
     <>
-      <Grid item mb={-3} mt={3}>
+      <Grid item mb={3} mt={3} className={styles.navButton}>
         <Link href="/">
           <Image
-            src="/images/header/yukino_logo.png"
+            src="/images/header/logo.png"
             width={220}
-            height={100}
+            height={75}
             objectFit="contain"
             alt="yukino_logo"
           />
         </Link>
-      </Grid>
-      <Grid item mb={2} ml={0.5}>
-        <Image
-          src="/images/header/hug_humor.png"
-          width={200}
-          height={41}
-          objectFit="contain"
-          alt="copy"
-        />
       </Grid>
     </>
   );

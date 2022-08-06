@@ -4,6 +4,8 @@ import Header from "./Header";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import styles from "../styles/Home.module.css";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import { IconButton } from "@mui/material";
 
 type Props = {
   children?: React.ReactNode;
@@ -26,16 +28,55 @@ export default function Layout({ children }: Props) {
 
       <main>
         <Grid container alignItems="top">
-          <Grid container item md={3} xs={12} pr={2} direction="column">
-            {/* ロゴとサブコピー */}
+          {/* PC表示用（ロゴ・ナビゲーション・コピーライト） */}
+          <Grid
+            container
+            item
+            md={3}
+            xs={12}
+            pr={2}
+            direction="column"
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
+            {/* ロゴ */}
             <Header />
             {/* ナビゲーション */}
             <Nav />
             {/* コピーライト */}
             <Footer />
           </Grid>
+          {/* SP表示用（ロゴ・ハンバーガーメニュー） */}
+          <Grid
+            container
+            item
+            xs={12}
+            mb={4}
+            sx={{
+              display: { xs: "flex", md: "none" },
+              justifyContent: "space-between",
+            }}
+          >
+            {/* ロゴ */}
+            <Header />
+            <Grid item mt={2}>
+              <IconButton>
+                <MenuRoundedIcon fontSize="large" />
+              </IconButton>
+            </Grid>
+          </Grid>
           <Grid item md={9} xs={12}>
             {children}
+          </Grid>
+          {/* SP表示用（コピーライト） */}
+          <Grid
+            container
+            item
+            mt={6}
+            xs={12}
+            sx={{ display: { xs: "block", md: "none" } }}
+          >
+            {/* コピーライト */}
+            <Footer />
           </Grid>
         </Grid>
       </main>
