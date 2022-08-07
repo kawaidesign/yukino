@@ -8,6 +8,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
 import NavModal from "./NavModal";
+import GalleryModal from "./GalleryModal";
 
 type Props = {
   children?: React.ReactNode;
@@ -17,10 +18,18 @@ type Props = {
  * レイアウトのコンポーネント。
  */
 export default function Layout({ children }: Props) {
+  // ナビゲーション用のモーダル
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const handleClick = () => {
+  const navHandleClick = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  // gallery用のモーダル
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const modalHandleClick = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -66,11 +75,19 @@ export default function Layout({ children }: Props) {
           >
             <Header />
             <Grid item mt={2}>
-              <IconButton onClick={handleClick}>
+              <IconButton onClick={navHandleClick}>
                 <MenuRoundedIcon fontSize="large" />
               </IconButton>
             </Grid>
-            {isNavOpen && <NavModal onClick={handleClick} />}
+            {isNavOpen && (
+              <NavModal
+                navHandleClick={navHandleClick}
+                modalHandleClick={modalHandleClick}
+              />
+            )}
+            {isModalOpen && (
+              <GalleryModal modalHandleClick={modalHandleClick} />
+            )}
           </Grid>
           <Grid item md={9} xs={12}>
             {children}

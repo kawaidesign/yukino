@@ -2,28 +2,44 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import Link from "next/link";
 import { MouseEventHandler } from "react";
-import GalleryModal from "./GalleryModal";
+
+type props = {
+  navHandleClick: MouseEventHandler | undefined;
+  modalHandleClick: MouseEventHandler | undefined;
+};
 
 /**
  * モーダル。
  * @prop {{ onClick: MouseEventHandler | undefined; }} props モーダルの表示・非表示の切り替えメソッド
  */
-const NavModal = (props: { onClick: MouseEventHandler }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-
+const NavModal = (props: props) => {
   return (
-    <div className={styles.galleryModalBackground} onClick={props.onClick}>
+    <div
+      className={styles.galleryModalBackground}
+      onClick={props.navHandleClick}
+    >
       <div className={styles.galleryModalContainer}>
+        <Grid item mb={2}>
+          <a
+            href="https://www.yukinoshop.com/about"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.navButton}
+              src="/images/nav/about.jpg"
+              width={90}
+              height={32}
+              objectFit="contain"
+              alt="about"
+            />
+          </a>
+        </Grid>
         <Grid item mb={2}>
           <Image
             className={styles.navButton}
-            onClick={handleClick}
+            onClick={props.modalHandleClick}
             src="/images/nav/gallery.jpg"
             width={90}
             height={32}
@@ -31,7 +47,6 @@ const NavModal = (props: { onClick: MouseEventHandler }) => {
             alt="gallery"
           />
         </Grid>
-        {isModalOpen && <GalleryModal onClick={handleClick} />}
         <Grid item mb={2}>
           <a
             href="https://www.yukinoshop.com/blog"

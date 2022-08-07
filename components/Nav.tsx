@@ -10,7 +10,7 @@ import styles from "../styles/Home.module.css";
 const Nav = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleClick = () => {
+  const modalHandleClick = () => {
     setIsModalOpen(!isModalOpen);
   };
 
@@ -35,7 +35,7 @@ const Nav = () => {
       <Grid item mb={1} ml={-1}>
         <Image
           className={styles.navButton}
-          onClick={handleClick}
+          onClick={modalHandleClick}
           src="/images/nav/gallery.jpg"
           width={90}
           height={32}
@@ -43,7 +43,7 @@ const Nav = () => {
           alt="gallery"
         />
       </Grid>
-      {isModalOpen && <GalleryModal onClick={handleClick} />}
+      {isModalOpen && <GalleryModal modalHandleClick={modalHandleClick} />}
       <Grid item mb={1} ml={-2}>
         <a
           href="https://www.yukinoshop.com/blog"
