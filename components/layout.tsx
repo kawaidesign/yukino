@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import styles from "../styles/Home.module.css";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton } from "@mui/material";
+import React, { useState } from "react";
+import NavModal from "./NavModal";
 
 type Props = {
   children?: React.ReactNode;
@@ -15,6 +17,12 @@ type Props = {
  * レイアウトのコンポーネント。
  */
 export default function Layout({ children }: Props) {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -45,7 +53,7 @@ export default function Layout({ children }: Props) {
             {/* コピーライト */}
             <Footer />
           </Grid>
-          {/* SP表示用（ロゴ・ハンバーガーメニュー） */}
+          {/* SP表示用（ロゴ・ナビゲーション） */}
           <Grid
             container
             item
@@ -56,13 +64,13 @@ export default function Layout({ children }: Props) {
               justifyContent: "space-between",
             }}
           >
-            {/* ロゴ */}
             <Header />
             <Grid item mt={2}>
-              <IconButton>
+              <IconButton onClick={handleClick}>
                 <MenuRoundedIcon fontSize="large" />
               </IconButton>
             </Grid>
+            {isNavOpen && <NavModal onClick={handleClick} />}
           </Grid>
           <Grid item md={9} xs={12}>
             {children}
@@ -72,10 +80,10 @@ export default function Layout({ children }: Props) {
             container
             item
             mt={6}
+            mb={6}
             xs={12}
             sx={{ display: { xs: "block", md: "none" } }}
           >
-            {/* コピーライト */}
             <Footer />
           </Grid>
         </Grid>

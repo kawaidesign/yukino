@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 
 /**
  * ナビゲーションのコンポーネント。
- * @param children 子要素
  */
 const Nav = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
