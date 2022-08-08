@@ -40,6 +40,9 @@ export default function Layout({ children }: Props) {
           name="description"
           content="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
         />
+        <meta property="og:image" content="/images/header/hug_humor_ogp.jpg" />
+        <meta property="og:image:width" content={"1200"} />
+        <meta property="og:image:height" content={"630"} />
         <link rel="icon" href="/images/favicon/favicon.png" />
       </Head>
 
@@ -67,13 +70,15 @@ export default function Layout({ children }: Props) {
             container
             item
             xs={12}
-            mb={4}
+            mb={2}
             sx={{
               display: { xs: "flex", md: "none" },
               justifyContent: "space-between",
             }}
           >
-            <Header />
+            <Grid item xs={6}>
+              <Header />
+            </Grid>
             <Grid item mt={2}>
               <IconButton onClick={navHandleClick}>
                 <MenuRoundedIcon fontSize="large" />
@@ -97,7 +102,7 @@ export default function Layout({ children }: Props) {
             container
             item
             mt={6}
-            mb={6}
+            mb={10}
             xs={12}
             sx={{ display: { xs: "block", md: "none" } }}
           >
