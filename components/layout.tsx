@@ -40,7 +40,10 @@ export default function Layout({ children }: Props) {
           name="description"
           content="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
         />
-        <meta property="og:image" content="/images/header/hug_humor_ogp.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.yukinodesignworks.com/images/header/hug_humor_ogp.jpg"
+        />
         <meta property="og:image:width" content={"1200"} />
         <meta property="og:image:height" content={"630"} />
         <link rel="icon" href="/images/favicon/favicon.png" />
