@@ -34,6 +34,25 @@ export default function Layout({ children }: Props) {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>yukino</title>
+        <meta
+          name="description"
+          content="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
+        />
+        <meta
+          name="keyword"
+          content="yukino design works, yukinodesignworks, yukino, イラスト、雑貨"
+        />
+        <meta
+          property="og:image"
+          content="https://www.yukinodesignworks.com/images/header/hug_humor_ogp.jpg"
+        />
+        <meta property="og:image:width" content={"1200"} />
+        <meta property="og:image:height" content={"630"} />
+        <link rel="icon" href="/images/favicon/favicon.png" />
+      </Head>
+
       <main>
         <Grid container alignItems="top">
           {/* PC表示用（ロゴ・ナビゲーション・コピーライト） */}
