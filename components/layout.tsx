@@ -40,6 +40,10 @@ export default function Layout({ children }: Props) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta
+          name="google-site-verification"
+          content="4W0536XeH4_Gzcaoxid1dDT9BaUvznTOxrQZEIAJ-n8"
+        />
         <link rel="icon" href="/images/favicon/favicon.png" />
       </Head>
       <DefaultSeo
