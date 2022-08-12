@@ -3,6 +3,7 @@ import Header from "./Header";
 import Nav from "./Nav";
 import NavModal from "./NavModal";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 import GalleryModal from "./GalleryModal";
 import styles from "../styles/Home.module.css";
 import { Grid } from "@mui/material";
@@ -135,6 +136,7 @@ export default function Layout({ children }: Props) {
           >
             <Footer />
           </Grid>
+          <ScrollToTop />
         </Grid>
       </main>
     </div>

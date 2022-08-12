@@ -117,6 +117,13 @@
   }
 }
 
+.scrollToTopIcon {
+  position: fixed;
+  z-index: 5;
+  bottom: 2rem;
+  right: 2rem;
+}
+
 @media screen and (max-width: 599px) {
   .gallery .title {
     font-size: 1.1rem;
