@@ -1,14 +1,14 @@
-import { Grid } from "@mui/material";
 import Head from "next/head";
 import Header from "./Header";
 import Nav from "./Nav";
+import NavModal from "./NavModal";
 import Footer from "./Footer";
+import GalleryModal from "./GalleryModal";
 import styles from "../styles/Home.module.css";
+import { Grid } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
-import NavModal from "./NavModal";
-import GalleryModal from "./GalleryModal";
 import { DefaultSeo } from "next-seo";
 
 type Props = {
