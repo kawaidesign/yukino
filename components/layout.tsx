@@ -9,6 +9,7 @@ import { IconButton } from "@mui/material";
 import React, { useState } from "react";
 import NavModal from "./NavModal";
 import GalleryModal from "./GalleryModal";
+import { DefaultSeo } from "next-seo";
 
 type Props = {
   children?: React.ReactNode;
@@ -35,23 +36,38 @@ export default function Layout({ children }: Props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>yukino</title>
         <meta
-          name="description"
-          content="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta
-          name="keyword"
-          content="yukino design works, yukinodesignworks, yukino, イラスト、雑貨"
-        />
-        <meta
-          property="og:image"
-          content="https://www.yukinodesignworks.com/images/header/hug_humor_ogp.jpg"
-        />
-        <meta property="og:image:width" content={"1200"} />
-        <meta property="og:image:height" content={"630"} />
         <link rel="icon" href="/images/favicon/favicon.png" />
       </Head>
+      <DefaultSeo
+        defaultTitle="yukino design works"
+        description="「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです"
+        openGraph={{
+          type: "website",
+          title: "yukino design works",
+          description:
+            "「hug&humor(ハグ&ユーモア)」をコンセプトに、ハートフルで遊び心のあるデザインを展開しているイラストレーターyukinoの HPです",
+          site_name: "yukino design works",
+          url: "https://www.yukinodesignworks.com",
+          images: [
+            {
+              url: "https://www.yukinodesignworks.com/images/header/hug_humor_ogp.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
 
       <main>
         <Grid container alignItems="top">
