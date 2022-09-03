@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   const images: string[] = [
     "/images/slide/hug_humor.jpg",
-    "/images/slide/recruitment_illust.jpg",
     "/images/slide/slide1.jpg",
     "/images/slide/slide2.jpg",
     "/images/slide/slide3.jpg",
